@@ -1,0 +1,23 @@
+<script>
+
+let Subject_arr = ["Physics","Maths","Chemistry"];
+let Marks_arr = [];
+for(let i in Subject_arr){
+    Marks_arr[i] = window.prompt("Enter Marks for "+ Subject_arr[i]+". ");
+}
+
+
+for(let i in Marks_arr){
+    Marks = Marks_arr[i];
+        if(Marks >= 80){
+            console.log("Grade A: "+Marks);
+        }else if(Marks >= 60 && Marks <= 79){
+            console.log("Grade B: "+Marks);
+        }else if(Marks >= 35 && Marks <= 59){
+            console.log("Grade C: "+Marks);
+        }else{
+        console.log("Fail: "+Marks);
+        }
+}
+
+</script>
