@@ -1,23 +1,46 @@
 <script>
 
-let Subject_arr = ["Physics","Maths","Chemistry"];
+let Subject_arr = ["History","Science","Maths"];
+
+
 let Marks_arr = [];
-for(let i in Subject_arr){
-    Marks_arr[i] = window.prompt("Enter Marks for "+ Subject_arr[i]+". ");
-}
+let Marks_arr1 = [];
+
+ for(let i = 0; i<3 ;i++){
+    Marks_arr[i] = window.prompt("Enter the Marks1 for "+ Subject_arr[i]);
+ }
+
+  for(let i = 0; i<3 ;i++){
+    Marks_arr1[i] = window.prompt("Enter the Marks2 for "+ Subject_arr[i]);
+ }
 
 
-for(let i in Marks_arr){
-    Marks = Marks_arr[i];
-        if(Marks >= 80){
-            console.log("Grade A: "+Marks);
-        }else if(Marks >= 60 && Marks <= 79){
-            console.log("Grade B: "+Marks);
-        }else if(Marks >= 35 && Marks <= 59){
-            console.log("Grade C: "+Marks);
+
+
+function returnGrade(Subject,Marks){
+    for(let i = 0; i<3 ;i++){
+        if(Marks[i]<=100 && Marks[i]>=0){
+            if(Marks[i]<=34){
+                console.log("Failed in "+Subject[i]+" with marks "+Marks[i]);
+
+            }else{
+                if((Marks[i] <= 100) && (Marks[i]>=80)){
+                    console.log("Grade A in "+Subject[i]+" with marks "+Marks[i]);
+                }else if((Marks[i] <= 79) && (Marks[i]>=60)){
+                    console.log("Grade B in "+Subject[i]+" with marks "+Marks[i]);
+                }else{
+                    console.log("Grade C in "+Subject[i]+" with marks "+Marks[i]);
+                }
+            }
         }else{
-        console.log("Fail: "+Marks);
-        }
+            console.log("Error!! Please enter valid marks");
+        }    
+    }
 }
+
+returnGrade(Subject_arr,Marks_arr);
+console.log("////////////////////////////////////////////////");
+returnGrade(Subject_arr,Marks_arr1);
+
 
 </script>
