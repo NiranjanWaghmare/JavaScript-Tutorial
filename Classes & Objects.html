@@ -1,18 +1,25 @@
 <script>
-    
-    class Student{
 
-        percentObtained(name,marks){
-            let percent = (marks/200)*100;
-            console.log(name+" got "+percent+ "% ");
+    class Students{
+        constructor(name,marks){
+            this.name = name;
+            this.marks = marks;
         }
-        
+        getPercentage(){
+            let percent = (this.marks/200)*100;
+            console.log(this.name+" got "+this.marks+ " Marks and "+ percent + " Percentage.");
+        }
     }
 
-    let Student1 = new Student();
-    Student1.percentObtained("Niranjan", 120);
+    let Obj1 = new Students("Aditya",150);
+    Obj1.getPercentage();
 
-    let Student2 = new Student();
-    Student2.percentObtained("Student2.name", 70);
+    let Obj2 = new Students("Mahesh",70);
+    Obj2.getPercentage();
+
+    let Obj3 = new Students("Vishal",120);
+    Obj3.getPercentage();
+
+
 
 </script>
