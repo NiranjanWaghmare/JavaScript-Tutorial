@@ -1,0 +1,25 @@
+<script>
+    //   class Greeting{
+    //      name = "Vikram";
+    //      greet(){
+    //          console.log("Hi " + this.name);
+    //      }
+    //   }
+    //   let Obj1 = new Greeting();
+    //   Obj1.greet();
+    // //   console.log(Obj1.name);
+
+
+    let Obj1 = {
+        name: "Vikram",
+        greet(){
+            console.log(this);
+        }
+    } 
+    Obj1.greet();
+
+    function greet1() {
+        console.log(this);
+    }
+    greet1();
+</script>
